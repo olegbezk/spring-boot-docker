@@ -1,5 +1,45 @@
-#Spring Boot and Docker
+# Spring Boot and Docker
 
-Source code in this repo is to support my on line course for Docker and Spring Boot. 
+## Setup _username/.m2/settings.xml_ for pushing images to the [DockerHub](https://hub.docker.com/):
 
-You can learn more about my course [here](http://courses.springframework.guru).
+```xml
+<servers>
+  <server>
+    <id>docker.io</id>
+    <username>username</username>
+    <password>password</password>
+  </server>
+</servers>
+```
+
+# Maven Fabric8 commands
+
+## Run docker image:
+
+``
+mvn docker:run
+``
+
+## Stop docker image:
+
+``
+mvn docker:stop
+``
+
+## Start docker image in background:
+
+``
+mvn docker:start
+``
+
+## Build and push image to the local docker repo:
+
+``
+mvn clean package docker:build
+``
+
+## Build and push image to the [DockerHub](https://hub.docker.com/):
+
+``
+mvn clean package docker:build docker:push
+``
