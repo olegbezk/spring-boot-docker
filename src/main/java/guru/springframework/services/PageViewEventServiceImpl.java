@@ -33,4 +33,9 @@ public class PageViewEventServiceImpl implements PageViewEventService {
         log.info("Sending Message to page view service");
         pageViewService.sendPageViewEvent(pageViewEvent);
     }
+
+    @Override
+    public void sendPageViewEvent() {
+        sendPageViewEvent(null);
+    }
 }
