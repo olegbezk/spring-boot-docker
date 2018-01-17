@@ -49,3 +49,17 @@ mvn clean package docker:build docker:push
 ``
 mvn clean package verify docker:push
 ``
+
+# Docker Compose
+
+## Run docker compose script in directory with *docker-compose.yml* file:
+
+``
+docker-compose up -d
+``
+
+## Stop docker compose script in directory with *docker-compose.yml* file:
+
+``
+docker-compose down
+``
