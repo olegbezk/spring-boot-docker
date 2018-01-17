@@ -44,7 +44,7 @@ mvn clean package docker:build
 mvn clean package docker:build docker:push
 ``
 
-## Example MVN Command for CI
+## Example MVN Command for CI:
 
 ``
 mvn clean package verify docker:push
