@@ -63,3 +63,30 @@ docker-compose up -d
 ``
 docker-compose down
 ``
+
+# Docker swarm mode
+
+## Get info about docker:
+
+``
+docker info
+``
+
+## Init docker in swarm mode:
+
+``
+docker swarm init
+`` 
+
+## Manage a swarm cluster with *Portainer*:
+
+``
+docker service create \
+--name portainer \
+--publish 9000:9000 \
+--replicas=1 \
+--constraint 'node.role == manager' \
+--mount type=bind,src=//var/run/docker.sock,dst=/var/run/docker.sock \
+portainer/portainer \
+-H unix:///var/run/docker.sock
+``
