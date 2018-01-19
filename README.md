@@ -80,7 +80,7 @@ docker swarm init
 
 ## Manage a swarm cluster with *Portainer*:
 
-``
+``sh
 docker service create \
 --name portainer \
 --publish 9000:9000 \
