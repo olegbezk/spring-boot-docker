@@ -90,3 +90,8 @@ docker service create \
 portainer/portainer \
 -H unix:///var/run/docker.sock
 ```
+# Specify key for access to the [DigitalOcean](https://www.digitalocean.com/) server:
+
+``
+ssh -i "~/.ssh/<key-name>.pub" root@<node-ip>
+``
