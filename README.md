@@ -90,8 +90,24 @@ docker service create \
 portainer/portainer \
 -H unix:///var/run/docker.sock
 ```
-# Specify key for access to the [DigitalOcean](https://www.digitalocean.com/) server:
+## Specify key for access to the [DigitalOcean](https://www.digitalocean.com/) server:
 
 ``
 ssh -i "~/.ssh/<key-name>.pub" root@<node-ip>
+``
+
+## MySQL Service:
+
+```sh
+docker service create \
+--name mysqldb -p 3306:3306 \
+-e MYSQL_DATABASE=pageviewservice \
+-e MYSQL_ALLOW_EMPTY_PASSWORD=yes \
+mysql
+```
+
+# List Processes in service
+
+``
+docker service ps mysqldb
 ``
