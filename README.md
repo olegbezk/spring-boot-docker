@@ -106,7 +106,7 @@ docker service create \
 mysql
 ```
 
-## List Processes in service
+## List Processes in service:
 
 ``
 docker service ps mysqldb
