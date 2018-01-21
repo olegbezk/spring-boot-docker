@@ -171,3 +171,9 @@ docker service create --name springbootwebapp -p 8080:8080 \
  --network quetzalko-service-network \
 quetzalko/springbootdocker
 ```
+
+## Docker logs for service:
+
+``
+docker service logs -f <service_name>
+``
