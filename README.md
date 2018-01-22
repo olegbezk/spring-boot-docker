@@ -180,6 +180,8 @@ docker service logs -f <service_name>
 
 ## Docker stack deploy services:
 
+### Create file *docker-compose.yml*
+
 ``
 docker stack deploy -c docker-compose.yml quetzalko-stack
 ``
