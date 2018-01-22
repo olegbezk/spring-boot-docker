@@ -177,3 +177,9 @@ quetzalko/springbootdocker
 ``
 docker service logs -f <service_name>
 ``
+
+## Docker stack deploy services:
+
+``
+docker stack deploy -c docker-compose.yml quetzalko-stack
+``

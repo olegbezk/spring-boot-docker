@@ -85,7 +85,7 @@
                             <build>
                                 <dockerFileDir>${project.basedir}/target/dockerfile/</dockerFileDir>
 
-                                <!--copies artficact to docker build dir in target-->
+                                <!--copies artifact to docker build dir in target-->
                                 <assembly>
                                     <descriptorRef>artifact</descriptorRef>
                                 </assembly>
