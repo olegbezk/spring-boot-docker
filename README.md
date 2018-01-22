@@ -185,3 +185,21 @@ docker service logs -f <service_name>
 ``
 docker stack deploy -c docker-compose.yml quetzalko-stack
 ``
+
+## Docker secrets syntax:
+
+```sh
+docker secret create
+
+docker secret inspect
+
+docker secret ls
+
+docker secret rm
+```
+
+## Create docker secret:
+
+``
+echo "password" | docker create secret mysql.txt -
+``
